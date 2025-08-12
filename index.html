@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +11,38 @@
 </head>
 <body>
     <header class="header">
+        <nav class="header__nav">
+            <ul class="menu menu--principal">
+                <li class="menu__item">
+                    <a class="menu__link active" href="#home">
+                        <span class="menu__text">Home</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#projetos">
+                        <span class="menu__text">Projetos</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#sobre">
+                        <span class="menu__text">Sobre</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#contato">
+                        <span class="menu__text">Contato</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
         <div class="header__brand">
-            <img class="brand__logo" src="assets/images/android-chrome-192x192.png" alt="Logo R">
+            <img class="brand__logo" src="assets/images/iconeGrande.png" alt="Logo R">
         </div>
-        <i id="toggleTheme" class="bi bi-brightness-high"></i>
+        <div class="header__toggle">
+            <i id="toggleTheme" class="bi bi-sun"></i>
+        </div>
     </header>
-    <nav>
+    <nav class="nav--mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item">
                 <a class="menu__link active" href="#home">
@@ -44,6 +70,39 @@
             </li>
         </ul>
     </nav>
-    <h1>ola</h1>
+    <main>
+        <div class="main__content1">
+            <h1><b>Soluções Criativas &</b> Desenvolvimento Front-end</h1>
+            <p>Rafael Alvarenga, Uberlândia, Desenvolvedor Front-end.</p>
+            <ul class="menu menu--social">
+                <li>
+                    <a class="menu__link" href="https://github.com/RafaelPalomino18">
+                        <i class="menu__icon bi bi-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="https://www.linkedin.com/in/rafael-alvarenga-0465a8266/">
+                        <i class="menu__icon bi bi-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu__link" href="https://www.instagram.com/rafa_alvarenga3994/">
+                        <i class="menu__icon bi bi-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+            <button class="btn btn--primary">
+                <span>Ver Projetos</span>
+                <i class="bi bi-arrow-down-right" ></i>
+            </button>
+        </div>
+        <div class="main_content2"><img src="assets/images/MyPortifolio.png" alt=""></div>
+    </main>
+    <footer>
+        <p>
+            @2025. Todos os Direitos Reservados. Rafael Alvarenga. Desenvolvido por  <a href="https://github.com/RafaelPalomino18">RA</a>
+        </p>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
