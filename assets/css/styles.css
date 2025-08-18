@@ -5,8 +5,9 @@
     --primary-color: #F0F0F0;
 
     --primary-bg-color: #111217;
-    --secundary-bg-color: #28292E;
-    --border-color: #28292E;
+    --secondary-bg-color: #28292E;
+    --primary-border-color: #28292E;
+    --secondary-border-color: #56575A;
 
     --title-color:#F0F0F0;
     --text-color:#9A9A9C;
@@ -18,8 +19,9 @@
     --primary-color: #0B0B0F;
 
     --primary-bg-color: #E9E9E9;
-    --secundary-bg-color: #C7C8C9;
-    --border-color: #C7C8C9;
+    --secondary-bg-color: #C7C8C9;
+    --primary-border-color: #C7C8C9;
+    --secondary-border-color: #9A9A9C;
 
     --title-color:#0B0B0F;
     --text-color:#28292E;
@@ -125,7 +127,7 @@ menu{
     position: fixed;
     bottom: 0;
     justify-content: space-between;
-    border-top: 1px solid var(--border-color)
+    border-top: 1px solid var(--primary-border-color)
 }
 
 .menu--mobile .menu__link{
@@ -217,18 +219,44 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    gap: 1.25rem;
     padding: 6.25rem 1rem 2rem 1rem;
-    background: var(--secundary-bg-color);
+    background: var(--secondary-bg-color);
     margin-top: -5.5rem;
 }
 
 .skills h2{
+    font-size: 2rem;;
     text-transform: none;
+}
+
+.skills__list{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.skills__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--secondary-border-color);
+    border-radius: 50rem;
+}
+
+.skills__logo{
+    width: 2.4rem;
 }
 
 footer p {
     font-size: .875rem;
     text-align: center;
+    padding: 1rem;
     margin-bottom: 5rem;    
 }
 
@@ -236,7 +264,7 @@ footer p {
     .header {
         position: fixed;
         padding: 1rem 6rem; 
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--primary-border-color);
         background-color: var(--primary-bg-color);
     }
     .nav--mobile{
@@ -249,6 +277,24 @@ footer p {
     .header__nav,
     .header__toggle{
         min-width: 30%;
+    }
+
+    h1{
+        font-size: 4rem;;
+    }
+    main{
+        padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .main__content1{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skills{
+        padding: 8rem 6rem 2rem 6rem;
+        margin-top: -6rem;
     }
 }
 
