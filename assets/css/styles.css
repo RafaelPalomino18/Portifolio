@@ -68,6 +68,8 @@ html[data-theme='light'] .technologies__logo{
     box-sizing: border-box;
     vertical-align: baseline;
     list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg-color) transparent;
 }
 
 body{
@@ -331,25 +333,30 @@ main{
     gap: 1rem;
 }
 
-.card__title{
-    font-size: 1.5rem;
-}
-
 .card__description{
-    font-size: 1rem;
     color: var(--primary-color)
 }
 
-.card__list{
-    margin-left: 1rem;
+.card__list, .about__list {
+  margin-left: 1.25rem
 }
 
-.card__item{
-    list-style: disc !important; 
+.card__item, .about__item {
+  list-style: disc;
 }
 
-.card__buttons{
-    display: flex; 
+.card__buttons, .description__buttons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card__buttons .btn {
+  padding: .65rem 1.25rem;
+}
+
+.card__buttons .btn span {
+    font-size: 1rem;
 }
 
 .card__body .technologies__list {
@@ -363,6 +370,117 @@ main{
 
 .card__body .technologies__logo {
   height: 2rem;
+}
+
+.projects .btn {
+  width: auto;
+  margin: auto;
+}
+
+/*Sobre mim*/
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* espaço entre blocos na mobile */
+}
+
+/* mobile / padrão: imagem em cima, centralizada e ocupando largura disponível */
+.about__content1,
+.about__content2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.about__photo {
+  width: 100%;
+  max-width: 480px;     /* maior no mobile, sem ficar gigante */
+  aspect-ratio: 1/1;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 1px solid var(--primary-border-color);
+  display: block;
+  margin: 0 auto;       /* centraliza no mobile */
+}
+
+.about__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+/* desktop: foto à esquerda, maior mas controlada; mais espaço entre foto, descrição e formação/cursos */
+@media (min-width: 992px) {
+  .about {
+    gap: 6rem; /* mais respiro entre seções */
+  }
+
+  /* conteúdo principal com coluna fixa para a foto e conteúdo ao lado */
+  .about__content1 {
+    display: grid;
+    grid-template-columns: 360px 1fr; /* foto maior (360px) + descrição */
+    align-items: start;
+    gap: 3rem; /* distancia foto e descrição (aumente se quiser mais) */
+  }
+
+  /* formação / cursos: layout em duas colunas com espaço entre elas */
+  .about__content2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* col1 e col2 lado a lado */
+    gap: 3rem; /* espaço entre formação e cursos */
+    align-items: start;
+  }
+
+  .about__content1 .about__photo,
+  .about__content2 .about__photo {
+    width: 100%;
+    max-width: 360px; /* tamanho controlado no desktop */
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0;
+    justify-self: end; /* coloca a foto à direita da coluna para ficar próxima ao conteúdo */
+  }
+
+  /* mais espaço interno nas colunas de formação / cursos */
+  .about__content2 .col1,
+  .about__content2 .col2 {
+    padding: 1rem;
+    line-height: 1.6;
+  }
+
+  .about__content2 .col1 > *,
+  .about__content2 .col2 > * {
+    margin-bottom: 0.75rem;
+  }
+}
+/* ...existing code... */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: 1px solid var(--primary-border-color);
+  border-bottom: 1px solid var(--primary-border-color);
+}
+
+.contact p {
+  text-align: center;
+}
+
+.contact .btn {
+  width: auto;
+}
+
+.contact .email {
+  text-transform: lowercase;
 }
 
 footer{
@@ -403,8 +521,16 @@ footer p {
         letter-spacing: 0.4rem;
     }
 
-    main, .projects{
+    main, .projects, .about{
         padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .contact {
+        padding: 6rem;
+    }
+    
+    .contact p {
+        width: 80%;
     }
 
     .main__content1{
@@ -436,6 +562,50 @@ footer p {
   .card__cover {
     width: 55%;
   }
+
+  /* Sobre: foto fixa à esquerda (320px) + conteúdo ao lado, gap menor para aproximar */
+  .about {
+    gap: 5rem;
+  }
+
+  .about__content1, .about__content2 {
+    display: grid;
+    grid-template-columns: 320px 1fr; /* coluna fixa para a foto + conteúdo ao lado */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem; /* reduz o espaço entre a foto e o conteúdo */
+  }
+
+  .about__content1 .about__photo,
+  .about__content2 .about__photo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0;
+    justify-self: end; /* aproxima a imagem do conteúdo (fica na borda direita da coluna da foto) */
+  }
+
+  .about__description h2 {
+    text-align: left;
+  }
+
+  .description__buttons {
+    justify-content: flex-start;
+  }
+
+  /* manter espaçamento interno nas colunas de formação / cursos */
+  .about__content2 .col1,
+  .about__content2 .col2 {
+    padding: 0.75rem 1rem;
+    line-height: 1.6;
+  }
+
+  .about__content2 .col1 > *,
+  .about__content2 .col2 > * {
+    margin-bottom: 0.75rem;
+  }
 }
 
 
@@ -443,6 +613,11 @@ footer p {
     h2{
         font-size: 4rem;
     }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
     .main{
         padding: 12rem 6rem 2rem;
     }

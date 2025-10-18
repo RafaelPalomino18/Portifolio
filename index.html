@@ -70,7 +70,7 @@
             </li>
         </ul>
     </nav>
-    <main>
+    <main id="home">
         <div class="main__content1">
             <h1><b>Soluções Criativas &</b> Desenvolvimento Front-end</h1>
             <p>Rafael Alvarenga, Uberlândia, Desenvolvedor Front-end.</p>
@@ -91,10 +91,12 @@
                     </a>
                 </li>
             </ul>
+            <a href="#projetos">
             <button class="btn btn--primary">
                 <span>Ver Projetos</span>
                 <i class="bi bi-arrow-down-right" ></i> 
             </button>
+            </a>
         </div>
         <div class="main_content2 img1--dark"><img src="assets/images/MyPortifolio.png" alt=""></div>
         <div class="main_content2 img1--light"><img src="assets/images/MyPortifolioLigth.png" alt=""></div>
@@ -143,13 +145,17 @@
                         </li>
                     </ul>
                     <div class="card__buttons">
+                        <a href="https://www.linkedin.com/posts/lorenzoaf_codeconnect-java-springboot-ugcPost-7345129597404876800-a4h9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEE6PDYBJVevK_WB5zVR9CKj7ecnILTNg_8">
                         <button class="btn btn--primary">
-                            <span>Prévia</span>
+                            <span>Sobre</span>
                             <i class="bi bi-arrow-up-right" ></i> 
                         </button>
+                        </a>
+                        <a href="https://github.com/odrgues/CodeConnect">
                         <button class="btn">
                             <span>Repositório</span>
                         </button>
+                        </a>
                     </div>
                 </div>  
             </div>
@@ -180,13 +186,17 @@
                         </li>
                     </ul>
                     <div class="card__buttons">
+                        <a href="https://organo-planner.vercel.app">
                         <button class="btn btn--primary">
                             <span>Prévia</span>
                             <i class="bi bi-arrow-up-right" ></i> 
                         </button>
+                        </a>
+                        <a href="https://github.com/odrgues/OrganoPlanner">
                         <button class="btn">
                             <span>Repositório</span>
                         </button>
+                        </a>
                     </div>
                 </div>  
             </div>
@@ -215,18 +225,123 @@
                         </li>
                     </ul>
                     <div class="card__buttons">
+                        <a href="https://pokedex-lilac-beta.vercel.app/">
                         <button class="btn btn--primary">
                             <span>Prévia</span>
                             <i class="bi bi-arrow-up-right" ></i> 
                         </button>
+                        </a>
+                        <a href="https://github.com/RafaelPalomino18/Pokedex">
                         <button class="btn">
                             <span>Repositório</span>
                         </button>
+                        </a>
                     </div>
                 </div>  
             </div>
         </div>
     </section>
+    <section id="sobre" class="about">
+    <div class="about__content1">
+      <img class="about__photo" src="assets/images/FotodePerfil.jpeg" alt="Foto de Perfil">
+      <div class="about__description">
+        <h2>Sobre mim</h2>
+        <p>Rafael Alvarenga Pereira Palomino. Apaixonado por tecnologia e design, descobri meu interesse por desenvolvimento ao criar minhas primeiras interfaces em HTML, CSS e JavaScript. Tenho grande afinidade com Front-end e Python, áreas que me permitem unir lógica e criatividade. Estou sempre em busca de evolução, aprendizado e novas formas de transformar ideias em experiências digitais. Atualmente, curso Sistemas de Informação.
+        </p>  
+        <div class="about__icons">
+          <i class="bi bi-translate"></i>
+          <span>Inglês: Intermediário</span>
+        </div>
+        <div class="description__buttons">
+          <a href="https://www.linkedin.com/in/rafael-alvarenga-0465a8266/" target="_blank">
+            <button class="btn btn--primary">
+              <span>Conecte-se Comigo</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </button> 
+          </a>
+          <a href="https://drive.google.com/file/d/1Gs7Qmwzimb_Iw-evGpD5AmmwfBS95q3X/view?usp=sharing">
+            <button class="btn">
+              <span>Currículo</span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="about__content2">
+      <div class="col1">
+        <div class="row1">
+          <h3>Formação</h3>
+          <h4>Graduando em Sistemas de Informação</h4>
+          <span>6° período 2025 - Atualmente</span>
+          <div class="about__icons">
+            <i class="bi bi-bank"></i>
+            <span>Universidade Uniube</span>
+          </div>
+        </div>
+        <div class="row2">
+          <h3>Experiências</h3>
+          <h4>Instrutora</h4>
+          <span>Digital Innovation One. Fev 2023 - Atualmente</span>
+          <span>Produção de conteúdos educacionais direcionados a 
+            alunos iniciantes que desejam construir uma base no Desenvolvimento Front-end.
+          </span>
+          <ul class="about__list">
+            <li class="about__item">Elaboração de ementas;</li>
+            <li class="about__item">Ministração de aulas assíncronas;</li>
+            <li class="about__item">Produção de materiais complementares.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col2">
+        <h3>Cursos</h3>
+        <div id="accordion">
+          <div class="accordion__item active">
+            <button class="accordion__header start">
+              <span>Versionamento de Código com Git e GitHub</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <p>
+                Digital Innovation One. Fev 2023. 2h.
+              </p>
+              <p>
+                O que é versionamento de código, Git e GitHub. Como instalar e configurar o Git em diferentes sistemas 
+                operacionais e como autenticar via Token e SSH. Como manusear repositórios, indo desde a criação e clonagem 
+                até o gerenciamento de branches, passando por todas as etapas de salvar, desfazer e sincronizar alterações 
+                com o repositório remoto. 
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header">
+              <span>Contribuindo em um Projeto Open Source no GitHub</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body">
+              <p>
+                Digital Innovation One. Fev 2023. 1h.
+              </p>
+              <p>
+                Lab prático sobre colaboração em projetos de código aberto.
+              </p>
+            </div>
+          </div>
+          <div class="accordion__item">
+            <button class="accordion__header end">
+              <span>Organizando seus Estudos com os Roadmaps DIO e o Notion</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+            <div class="accordion__body end">
+              <p>
+                Digital Innovation One. Fev 2023. 2h.
+              </p>
+              <p>
+                Otimização dos estudos com os Roadmaps DIO, construindo um caderno de estudos com a ferramenta Notion.
+              </p>
+            </div>
+          </div>
+        </div>
+  </section>
     <footer>
         <p>
             @2025. Todos os Direitos Reservados. Rafael Alvarenga. Desenvolvido por  <a href="https://github.com/RafaelPalomino18">RA</a>
