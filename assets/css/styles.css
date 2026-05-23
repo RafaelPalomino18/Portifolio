@@ -766,3 +766,80 @@ footer p {
   }
   .accordion__header i { font-size: 1rem; }
 }
+
+/* Melhorar espaçamento/responsividade dos textos em "Sobre" e "Cursos" */
+@media (max-width: 991px) {
+  .about {
+    padding: 1rem;           /* espaço lateral geral */
+    gap: 1.25rem;            /* separa seções */
+    box-sizing: border-box;
+  }
+
+  .about__content1,
+  .about__content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;              /* evita padding duplicado */
+  }
+
+  .about__description {
+    padding: 0 0.5rem;      /* deixa texto afastado das laterais */
+    gap: 1rem;
+  }
+
+  .about__description h2,
+  .about__description p,
+  .about__content2 .col1,
+  .about__content2 .col2 {
+    margin: 0 0 0.9rem 0;   /* espaçamento vertical entre blocos */
+    line-height: 1.6;
+  }
+
+  .about__photo {
+    margin: 0 auto 0.9rem;  /* separa imagem do texto em mobile */
+    max-width: 420px;
+    width: 100%;
+  }
+
+  /* Accordion: mais padding e espaço entre itens para leitura */
+  .accordion__item {
+    margin-bottom: 1rem;
+  }
+
+  .accordion__header {
+    padding: 0.75rem 0.9rem;
+    font-size: 1rem;
+  }
+
+  .accordion__body {
+    padding: 0.9rem;
+    margin-top: 0.6rem;
+    line-height: 1.6;
+  }
+
+  /* colunas de cursos/formaçao empilhadas com padding lateral */
+  .about__content2 {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 0.8rem;
+    gap: 1rem;
+  }
+
+  .about__description {
+    padding: 0 0.4rem;
+  }
+
+  .accordion__header {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.98rem;
+  }
+
+  .accordion__body {
+    padding: 0.8rem;
+  }
+}
