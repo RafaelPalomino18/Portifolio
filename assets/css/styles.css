@@ -414,7 +414,10 @@ main{
   justify-content: flex-start;
   gap: 1.5rem;
 }
-
+.certificates{
+    width: 50%;
+    margin-bottom: 5%;
+}
 /* desktop: foto à esquerda, maior mas controlada; mais espaço entre foto, descrição e formação/cursos */
 @media (min-width: 992px) {
   .about {
@@ -699,4 +702,67 @@ footer p {
     .technologies{
         padding: 10rem 15rem 4rem;
     }
+}
+.accordion__item {
+  margin-bottom: 1.25rem; /* espaço entre itens do accordion */
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 25px;
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 0.9rem 1.1rem;   /* área clicável confortável */
+  font-size: 1.08rem;       /* texto maior e legível */
+  font-weight: 600;         /* destaque do título */
+  color: var(--title-color);
+
+  border-radius: 10px;      /* bordas arredondadas, não exageradas */
+  border: 1px solid rgba(0,0,0,0.06);
+  background: var(--text-color); /* tom sutil, mantém consistência com tema */
+  transition: background-color 160ms ease, transform 120ms ease;
+  cursor: pointer;
+}
+
+/* efeito sutil ao hover para feedback */
+.accordion__header:hover {
+  background-color: var(--primary-bg-color);
+  transform: translateY(-2px);
+}
+
+/* ícone do caret proporcional e com transição suave */
+.accordion__header i {
+  font-size: 1.12rem;
+  transition: transform 180ms ease;
+  color: inherit;
+}
+
+/* estado ativo: leve destaque sem exagero */
+.accordion__item.active .accordion__header {
+  background: var(--primary-bg-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* corpo do accordion com espaçamento e borda suave */
+.accordion__body {
+  margin-top: 0.6rem;
+  padding: 0.9rem 1rem;
+  line-height: 1.6;
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* responsivo: mantém proporções em telas pequenas */
+@media (max-width: 480px) {
+  .accordion__header {
+    padding: 0.8rem 0.95rem;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+  .accordion__header i { font-size: 1rem; }
 }
