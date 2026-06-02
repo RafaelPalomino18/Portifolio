@@ -435,9 +435,16 @@ main{
   justify-content: flex-start;
   gap: 1.5rem;
 }
-.certificates{
-    width: 50%;
-    margin-bottom: 5%;
+.certificates {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 1.5rem;
+}
+@media (min-width: 768px) {
+  .certificates {
+    width: auto;
+    margin: 0 0 1.5rem;
+  }
 }
 /* desktop: foto à esquerda, maior mas controlada; mais espaço entre foto, descrição e formação/cursos */
 @media (min-width: 992px) {
