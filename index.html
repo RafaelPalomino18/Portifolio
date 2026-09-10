@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +39,9 @@
             <img class="brand__logo" src="assets/images/iconeGrande.png" alt="Logo R">
         </div>
         <div class="header__toggle">
-            <i id="toggleTheme" class="bi bi-sun"></i>
+            <button id="toggleTheme" class="theme-toggle" type="button" aria-label="Ativar tema escuro" title="Ativar tema escuro">
+                <i class="bi bi-moon-stars" aria-hidden="true"></i>
+            </button>
         </div>
     </header>
     <nav class="nav--mobile">
@@ -244,7 +246,7 @@
                 </div>  
             </div>
 
-                        <div class="projects__card card--reverse">
+            <div class="projects__card card--reverse">
                 <img class="card__cover img2--dark" src="assets/images/projects/IA_cancer_light (2).png" alt="IA contra o Cancer">
                 <img class="card__cover img2--light" src="assets/images/projects/IA_cancer_light (1).png" alt="IA contra o Cancer">
                 <div class="card__body">
@@ -257,7 +259,7 @@
                     </ul>
                     <ul class="technologies__list">
                         <li class="technologies__item">
-                            <img class="technologies__logo" src="assets/images/technologies/python.png" alt="logo python">
+                            <img class="technologies__logo" src="assets/images/technologies/python.png" alt="Logo Python">
                         </li>
                     </ul>
                     <div class="card__buttons">
@@ -275,6 +277,44 @@
                     </div>
                 </div>  
             </div>
+
+            <div class="projects__card card">
+                <img class="card__cover img2--dark" src="assets/images/projects/projeto esquadiras alvarenga.jpg" alt="Projeto Esquadrias Alvarenga">
+                <img class="card__cover img2--light" src="assets/images/projects/projeto esquadiras alvarenga.jpg" alt="Projeto Esquadrias Alvarenga">
+                <div class="card__body">
+                    <h3 class="card__title">Projeto Esquadrias Alvarenga</h3>
+                    <p class="card__description">Projeto de desenvolvimento de software para a empresa Esquadrias Alvarenga.</p>
+                    <ul class="card__list">
+                        <li class="card__item">Objetivo:  </li>
+                        <li class="card__item">divulgar a empresa com um design moderno e funcional</li>
+                    </ul>
+                    <ul class="technologies__list">
+                        <li class="technologies__item">
+                            <img class="technologies__logo" src="assets/images/technologies/html.png" alt="Logo HTML">
+                        </li>
+                        <li class="technologies__item">
+                            <img class="technologies__logo" src="assets/images/technologies/css.png" alt="Logo CSS">
+                        </li>
+                        <li class="technologies__item">
+                            <img class="technologies__logo" src="assets/images/technologies/js.png" alt="Logo JavaScript">
+                        </li>
+                    </ul>
+                    <div class="card__buttons">
+                        <a href="">
+                        <button class="btn btn--primary">
+                            <span>Prévia</span>
+                            <i class="bi bi-arrow-up-right" ></i> 
+                        </button>
+                        </a>
+                        <a href="https://github.com/RafaelPalomino18/Projeto-Alvarenga">
+                        <button class="btn">
+                            <span>Repositório</span>
+                        </button>
+                        </a>
+                    </div>
+                </div>  
+            </div>
+
 
 
         </div>
@@ -406,6 +446,37 @@
           </div>
         </div>
   </section>
+    <section id="contato" class="contact">
+        <div class="contact__content">
+            <span class="contact__eyebrow">Vamos conversar</span>
+            <h2>Entre em contato</h2>
+            <p>Tem uma ideia, projeto ou oportunidade? Fale comigo e vamos construir algo relevante juntos.</p>
+            <a class="contact__email" href="mailto:rafaalverenga321@gmail.com">
+                <i class="bi bi-envelope-at" aria-hidden="true"></i>
+                <span>rafaalverenga321@email.com</span>
+            </a>
+            <ul class="contact__links" aria-label="Redes profissionais">
+                <li>
+                    <a href="https://www.linkedin.com/in/rafael-alvarenga-0465a8266/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/RafaelPalomino18" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/rafa_alvarenga3994/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
     <footer>
         <p>
             @2025. Todos os Direitos Reservados. Rafael Alvarenga. Desenvolvido por  <a href="https://github.com/RafaelPalomino18">RA</a>
